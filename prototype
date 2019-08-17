@@ -1,0 +1,16 @@
+//create an empty function, function in js is an object
+
+function doSomething(){}
+
+//add property to prototype
+
+doSomething.prototype.foo="bar";
+
+//adding property to an object
+
+let dosomethingInstance= new doSomething();
+
+
+dosomethingInstance.prop= "some value";
+
+console.log(dosomethingInstance);
