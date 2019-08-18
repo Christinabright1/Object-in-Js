@@ -32,3 +32,19 @@ const singLizzard= dragon.sing.bind(lizzard);//lizzard inherit sing from dragon 
 
 
 console.log(singLizzard());
+
+
+
+// Mofify .map() to print '🗺' at the end of each item.
+//adding map method to the prototype
+Array.prototype.map= function(){
+  let arr= [];
+  //loop through array that we have
+  for(let i =0; i< this.length; i++ ){
+    arr.push(this[i]+'🗺')
+  }
+  return arr;
+}
+console.log([1,2,3].map());
+
+
