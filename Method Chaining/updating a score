@@ -17,6 +17,7 @@
       updateScore(){
         this.score++;
         console.log(this.email,'score is now', this.score);
+        return this;
       }
     }
     
