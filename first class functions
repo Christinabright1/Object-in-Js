@@ -1,0 +1,10 @@
+Functions that can be passed around, created on the fly , used and variables can be set equal to them
+
+
+function log(a){
+   a();
+}
+
+log(function(){
+    console.log("hi");
+});
