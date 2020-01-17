@@ -1,0 +1,31 @@
+# Object-in-Js
+
+let database=[ {
+  username: "jonh",
+  password: "superSecret"
+}];
+
+let newFeeds=[{
+    username: "jonh",
+    timeline: "Solving algorithm problem"
+},
+{
+  username: "Doe",
+    timeline: "Javascript is really awesome"}];
+
+    /* write a signing function 
+      to sign , we have to check if username and password is correct
+    */
+
+    let userNamePrompt= prompt("What is your username ?");
+    let userPassword= prompt("What is your password ?");
+
+    function signing(user, pass){
+      if(user === database[0].username && pass === database[0].password){
+        console.log(newFeeds);
+      }else{
+          alert("Sorry you have enter wrong username or password");
+      }
+    }
+
+signing(userNamePrompt, userPassword);
