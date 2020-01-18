@@ -1,0 +1,71 @@
+# Object-in-Js
+
+
+/*facebook has so many users
+ how could we find somebody password and and username 
+*/ 
+
+let database= [{
+username : "Boddy",
+password : "123"
+
+},
+{
+username : "Jonh",
+password : "778"
+},
+{
+username : "Doe",
+password : "908"
+}
+];
+
+let newFeeds= [{
+   username: "Boddy",
+   timeline:"So tired of all that learning"
+},
+{
+  username: "Sally",
+   timeline:"javaScript is so cool"
+},
+{
+  username: "Mitch",
+   timeline:"JavaScript is pretty cool"
+}];
+
+/*write a signing function which will check the username and password for each user*/ 
+
+let usernamePromt= prompt("what is your username");
+let passwordPrompt= prompt("what is your password");
+
+/*Create a function, if user valide */
+    function isUservalide(user, pass){
+       for(let i=0; i< database.length; i++){
+     if(database[i].username === user && database[i].password === pass){
+      return true;
+     }
+   }
+       return false;
+    }
+/*this signing  give us alert message before return the newFeed , because it go through all users, if it doesn t find it, it  returns alert message and return newfeed when it find username and password.
+
+function signing1(user, pass){
+
+  console.log(isUservalid(user,pass));
+   /*for(let i=0; i< database.length; i++){
+     if(database[i].username === user && database[i].password === pass){
+       console.log(newFeeds);
+     }else{
+       alert("Wrong user name and password");
+     }
+   }
+}*/
+
+function signing(user, pass){
+    if(isUservalide(user, pass)){
+      console.log(newFeeds);
+    }else{
+      console.log("Sorry, you have enter wrong username and password");
+    }
+}
+signing(usernamePromt, passwordPrompt);
