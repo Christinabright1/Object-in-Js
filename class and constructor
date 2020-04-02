@@ -1,0 +1,56 @@
+# Object-in-Js
+
+ class User {
+    constructor(name, email){
+      this.name= name;
+      this.email= email;
+      this.score=0;
+    }
+    login(){
+      console.log(this.email, 'just login');
+      return this;
+    }
+    logout(){
+      console.log(this.email, 'just logout');
+      return this;
+    }
+    //chaining methods
+    updateScore(){
+      this.score++;
+      console.log(this.email, 'score is now ', this.score);
+      //we don t want to return undefined value whenever we call the method. We want to return the instance of that object, the instance of object is this. Return 'THIS'
+      return this
+    }
+ }
+
+   var userOne=  new User('Ryu', 'ryu@gmail.com');
+   var userTwo= new User('Jonh', 'jonh@gmail.com');
+   console.log(userOne);
+
+   userOne.login();
+   console.log(userOne);
+   userOne.updateScore();
+
+userOne.login().updateScore().updateScore().logout();
+ //the 'new' keyword
+ //- Create a new empty object
+ //-Set the value of 'this' to be the new empty object
+ //calls the constructor methods
+
+// CLASS INHERITANCE
+class Admin extends User {
+  deleteUser(user){
+     users= users.filter((u) =>{
+       return u.email !== u.email
+     });
+  }
+}
+
+//create an Admin
+var admin= new Admin('shaun', 'shaun@hmail.com');
+
+var users= [userOne, userTwo,admin];
+
+
+admin.deleteUser(userTwo);
+console.log(users);
