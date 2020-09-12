@@ -1,0 +1,47 @@
+We want to create and extract information about your favorite sports team. Basketball, soccer, tennis, or water polo, you pick it. It’s your job to create data using the JavaScript data structures at your disposal: arrays, objects, etc.
+
+
+
+
+
+const team = {
+  _players:  [
+    {
+  firstName: 'Pablo',
+  lastName: 'Sanchez',
+  age: 11
+}],
+  get players (){
+    return this._players;
+  },
+  _games : [
+    {
+  opponent: 'Broncos',
+  teamPoints: 42,
+  opponentPoints: 27
+}
+  ],
+  get games(){
+    return this._games;
+  },
+  addPlayer: function(firstName, lastName, age){
+    let player = {
+      firstName: firstName,
+      lastName: lastName,
+      age: age
+    };
+    this._players.push(player);
+  },
+  addGame: function(opponentName, teamPoints, opponentPoint){
+    let game = {
+   opponentName: opponentName,
+   teamPoints:  teamPoints,
+   opponentPoint: opponentPoint
+    }
+    this._games.push(game)
+  }
+
+};
+team.addPlayer(' Steph Curry Age 28,Lisa Leslie Age 44');
+
+team.addGame('Jonh', 110,70);
